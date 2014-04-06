@@ -2,12 +2,12 @@
 
 one:
   Name: MyString
-  Contact: MyString
+  contact: MyString
   Address: MyString
   NIC: MyString
 
 two:
   Name: MyString
-  Contact: MyString
+  contact: MyString
   Address: MyString
   NIC: MyString

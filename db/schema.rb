@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406065326) do
+ActiveRecord::Schema.define(version: 20140406173314) do
 
   create_table "members", force: true do |t|
     t.string   "Name"
-    t.string   "Contact"
+    t.string   "contact"
     t.string   "Address"
     t.string   "NIC"
     t.datetime "created_at"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 20140406065326) do
     t.string   "Language"
     t.string   "Genera"
     t.string   "Year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "post"
+    t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
