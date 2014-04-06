@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
  */
+.span3{
+	margin-top: 40px;
+}
