@@ -1,10 +1,16 @@
 class MoviesController < ApplicationController
+  
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
-
+  helper_method :sort_column, :sort_direction
   # GET /movies
   # GET /movies.json
+  # def index
+    # @movies = Movie.order('id ASC').paginate(:per_page => 5, :page => params[:page])
+  # end
+
   def index
-    @movies = Movie.all
+    # @movies = Movie.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    @movies = Movie.search(params[:search]).order("id ASC").paginate(:per_page => 5, :page => params[:page])
   end
 
   # GET /movies/1
@@ -62,13 +68,14 @@ class MoviesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_movie
-      @movie = Movie.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def movie_params
-      params.require(:movie).permit(:Name, :Language, :Genera, :Year)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_movie
+    @movie = Movie.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def movie_params
+    params.require(:movie).permit(:Name, :Language, :Genera, :Year)
+  end
 end
