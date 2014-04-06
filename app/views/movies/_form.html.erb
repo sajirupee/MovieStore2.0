@@ -1,0 +1,32 @@
+<%= form_for @movie, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :Name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Name, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Language, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Language, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Genera, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Genera, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :Year, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Year, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                movies_path, :class => 'btn' %>
+  </div>
+<% end %>
