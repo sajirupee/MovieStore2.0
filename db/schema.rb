@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140406173314) do
+ActiveRecord::Schema.define(version: 20140407180215) do
 
   create_table "members", force: true do |t|
     t.string   "Name"
@@ -31,11 +31,15 @@ ActiveRecord::Schema.define(version: 20140406173314) do
     t.datetime "updated_at"
   end
 
-  create_table "posts", force: true do |t|
-    t.string   "post"
-    t.string   "author"
+  create_table "rents", force: true do |t|
+    t.integer  "movie_id"
+    t.integer  "member_id"
+    t.date     "borrowDate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "rents", ["member_id"], name: "index_rents_on_member_id"
+  add_index "rents", ["movie_id"], name: "index_rents_on_movie_id"
 
 end

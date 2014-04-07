@@ -1,4 +1,7 @@
 class Member < ActiveRecord::Base
+  
+  has_many :rents, :dependent => :destroy
+  
   def create
     Member.create(params[:member])
   end

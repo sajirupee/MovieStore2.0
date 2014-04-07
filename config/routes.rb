@@ -1,4 +1,7 @@
 Bs::Application.routes.draw do
+  get "about/about"
+  resources :rents
+
   resources :members
 
   resources :movies

@@ -1,4 +1,7 @@
 class Movie < ActiveRecord::Base
+  
+  has_many :rents, :dependent => :destroy
+  
   def create
     Movie.create(params[:movie])
   end

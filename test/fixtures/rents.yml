@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 
+  member_id: 
+  borrowDate: 2014-04-07
+
+two:
+  movie_id: 
+  member_id: 
+  borrowDate: 2014-04-07
