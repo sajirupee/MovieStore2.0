@@ -1,6 +1,4 @@
 Bs::Application.routes.draw do
-  resources :posts
-
   resources :members
 
   resources :movies
