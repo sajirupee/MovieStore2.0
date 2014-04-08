@@ -19,8 +19,8 @@
     <% @rents.each do |rent| %>
       <tr>
         <td><%= link_to rent.id, rent_path(rent) %></td>
-        <td><%= rent.member.Name %></td>
         <td><%= rent.movie.Name %></td>
+        <td><%= rent.member.Name %></td>
         <td><%= l(rent.created_at, :format => ("%Y-%m-%d")) if rent.created_at  %></td>
         <td><%= rent.borrowDate%></td>
         <td>
