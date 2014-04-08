@@ -21,7 +21,6 @@
       <th><%= model_class.human_attribute_name(:contact) %></th>
       <th><%= model_class.human_attribute_name(:Address) %></th>
       <th><%= model_class.human_attribute_name(:NIC) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -33,7 +32,6 @@
         <td><%= member.contact %></td>
         <td><%= member.Address %></td>
         <td><%= member.NIC %></td>
-        <td><%=l member.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_member_path(member), :class => 'btn btn-mini' %>
