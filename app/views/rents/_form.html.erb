@@ -2,17 +2,17 @@
   <div class="control-group">
     <%= f.label :movie_id, :class => 'control-label' %>
     <div class="controls">
-       <%= f.text_field :movie_id, :class => 'text_field' %>
+       <%= f.collection_select :movie_id, Movie.all, :id, :Name, :prompt => "Select a movie", :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :member_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :member_id, :class => 'text_field' %>
+      <%= f.collection_select :member_id, Member.all, :id, :Name, :prompt => "Select a member", :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :borrowDate, :class => 'control-label' %>
+    <%= f.label "Return date", :class => 'control-label' %>
     <div class="controls">
       <%= f.date_select :borrowDate, :class => 'input-append date', :style => "height: 1000px" %>
     </div>

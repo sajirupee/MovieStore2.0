@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
 
   def index
     # @movies = Movie.search(params[:search]).order(sort_column + " " + sort_direction).paginate(:per_page => 5, :page => params[:page])
-    @movies = Movie.search(params[:search]).order("id ASC").paginate(:per_page => 5, :page => params[:page])
+    @movies = Movie.search(params[:search]).order("id ASC").paginate(:per_page => 10, :page => params[:page])
   end
 
   # GET /movies/1

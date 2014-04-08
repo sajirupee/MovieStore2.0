@@ -9,9 +9,9 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:movie_id) %></th>
-      <th><%= model_class.human_attribute_name(:member_id) %></th>
-      <th><%= model_class.human_attribute_name(:borrowDate) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:member_id) %></th> 
+      <th>Borrowed date</th>
+      <th>Return date</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -19,10 +19,10 @@
     <% @rents.each do |rent| %>
       <tr>
         <td><%= link_to rent.id, rent_path(rent) %></td>
-        <td><%= rent.movie_id %></td>
-        <td><%= rent.member_id %></td>
-        <td><%= rent.borrowDate %></td>
-        <td><%=l rent.created_at %></td>
+        <td><%= rent.member.Name %></td>
+        <td><%= rent.movie.Name %></td>
+        <td><%= l(rent.created_at, :format => ("%Y-%m-%d")) if rent.created_at  %></td>
+        <td><%= rent.borrowDate%></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_rent_path(rent), :class => 'btn btn-mini' %>
