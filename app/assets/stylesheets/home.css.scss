@@ -5,3 +5,30 @@
   width: 70%;
   margin-top: 40px;
 }
+.image{
+  width: 100%;
+  height: 600px;
+  padding: 10px;
+}
+.slider {
+  -moz-border-radius: 10px;
+  -webkit-border-radius:10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 840px; /* Update to your slider width */
+  height: 400px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider li {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+.poster{
+  float:left;
+  width:200px;
+  padding: 5px;
+}
